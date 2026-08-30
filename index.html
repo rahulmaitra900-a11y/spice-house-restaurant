@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spice House - Authentic Indian Restaurant with fresh ingredients and traditional flavors">
+<meta name="theme-color" content="#e63946">
+
+<title>Spice House | Authentic Indian Restaurant</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+header{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    padding:8px 12px;
+    border-radius:4px;
+    transition:background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus{
+    background-color:rgba(230, 57, 70, 0.3);
+    outline:none;
+}
+
+nav a:focus{
+    outline:2px solid #e63946;
+    outline-offset:2px;
+}
+
+.hero{
+    text-align:center;
+    padding:180px 20px 80px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#e63946;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    border:2px solid #e63946;
+    cursor:pointer;
+    transition:background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover{
+    background-color:#d62828;
+    border-color:#d62828;
+}
+
+.btn:focus{
+    outline:2px solid white;
+    outline-offset:2px;
+}
+
+section{
+    padding:80px 8%;
+    text-align:center;
+}
+
+h2{
+    font-size:36px;
+    margin-bottom:35px;
+}
+
+.about{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    color:#ddd;
+    font-size:18px;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1c1c1c;
+    padding:25px;
+    border-radius:15px;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within{
+    transform:translateY(-10px);
+    box-shadow:0 8px 20px rgba(230, 57, 70, 0.3);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0 8px;
+    font-size:22px;
+}
+
+.card p{
+    color:#aaa;
+    margin:8px 0;
+}
+
+.price{
+    color:#ff6b6b;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:12px;
+}
+
+.contact{
+    background:#181818;
+}
+
+.contact-info{
+    margin:12px 0;
+    font-size:18px;
+}
+
+.contact-info svg{
+    margin-right:8px;
+}
+
+footer{
+    padding:25px;
+    text-align:center;
+    background:#080808;
+    color:#aaa;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    border:2px solid #25D366;
+    transition:background-color 0.3s ease;
+    z-index:1000;
+}
+
+.whatsapp:hover,
+.whatsapp:focus{
+    background-color:#1da853;
+    border-color:#1da853;
+}
+
+.whatsapp:focus{
+    outline:2px solid white;
+    outline-offset:2px;
+}
+
+@media(max-width:600px){
+    .hero h1{
+        font-size:40px;
+    }
+
+    nav{
+        padding:18px 5%;
+    }
+
+    nav a{
+        margin-left:8px;
+        font-size:13px;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+}
+
+/* Skip to main content link */
+.skip-link{
+    position:absolute;
+    top:-40px;
+    left:0;
+    background:#e63946;
+    color:white;
+    padding:8px;
+    text-decoration:none;
+    z-index:100;
+}
+
+.skip-link:focus{
+    top:0;
+}
+</style>
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header role="banner">
+
+<nav role="navigation" aria-label="Main navigation">
+    <div class="logo">🍴 Spice House</div>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Authentic Indian Taste</h1>
+
+    <p>Fresh ingredients • Delicious food • Great experience</p>
+
+    <a href="#menu" class="btn">View Our Menu</a>
+</div>
+
+</header>
+
+
+<main id="main">
+
+<section id="about" role="region" aria-label="About Us">
+
+<h2>About Us</h2>
+
+<div class="about">
+<p>
+Welcome to Spice House — a place where traditional Indian flavors
+meet a modern dining experience. We prepare every dish with fresh
+ingredients, authentic spices and lots of passion.
+</p>
+</div>
+
+</section>
+
+
+<section id="menu" role="region" aria-label="Menu">
+
+<h2>Popular Menu</h2>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Chicken Biryani - aromatic rice dish with tender chicken pieces">
+
+<h3>Chicken Biryani</h3>
+
+<p>Authentic aromatic biryani.</p>
+
+<p class="price">₹249</p>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Butter Chicken - creamy tomato-based curry with tender chicken">
+
+<h3>Butter Chicken</h3>
+
+<p>Creamy and delicious.</p>
+
+<p class="price">₹299</p>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka - grilled paneer cheese cubes with spices">
+
+<h3>Paneer Tikka</h3>
+
+<p>Perfectly grilled paneer.</p>
+
+<p class="price">₹199</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact" class="contact" role="region" aria-label="Contact Information">
+
+<h2>Visit Us</h2>
+
+<div class="contact-info">📍 123 Main Street, Kolkata</div>
+
+<div class="contact-info">📞 <a href="tel:+919876543210" style="color:#ff6b6b;">+91 98765 43210</a></div>
+
+<div class="contact-info">🕐 Open Daily: 11 AM – 11 PM</div>
+
+<br>
+
+<a href="tel:+919876543210" class="btn">
+Call Now
+</a>
+
+</section>
+
+</main>
+
+<footer role="contentinfo">
+
+<p>© 2026 Spice House. All Rights Reserved.</p>
+
+</footer>
+
+
+<a class="whatsapp" href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+💬 WhatsApp
+</a>
+
+</body>
+</html>
